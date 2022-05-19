@@ -13,23 +13,28 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', 'PrincipalController@principal');
+Route::get('/', 'PrincipalController@index')->name('site.index');
 
 
-Route::get('/login', 'LoginController@login');
+Route::get('/login', 'LoginController@login')->name('site.login');
 
 
-Route::get('/cadastro', 'CadastroController@cadastro');
+Route::get('/cadastro', 'CadastroController@cadastro')->name('site.cadastro');
 
 
-Route::get('/visao-geral', 'VisaoGeralController@visaoGeral');
+Route::prefix('/user')->group(function() {
+
+    Route::get('/visao-geral', 'VisaoGeralController@visaoGeral')->name('user.visaogeral');
 
 
-Route::get('/despesas e rendas', 'DespesasRendasController@despesasRendas');
+    Route::get('/despesas e rendas', 'DespesasRendasController@despesasRendas')->name('user.despesasrendas');
 
 
-Route::get('/perfil', 'PerfilController@perfil');
+    Route::get('/perfil', 'PerfilController@perfil')->name('user.perfil');
 
 
-Route::get('/configuracoes', 'ConfiguracoesController@configuracoes');
+    Route::get('/configuracoes', 'ConfiguracoesController@configuracoes')->name('user.configuracoes');
+});
+
+
 

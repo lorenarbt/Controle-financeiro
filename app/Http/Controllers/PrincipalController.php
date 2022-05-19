@@ -6,7 +6,8 @@ use Illuminate\Http\Request;
 
 class PrincipalController extends Controller
 {
-    public function principal (){
-        echo 'Olá, seja bem vindo ao controle financeiro';
+    public function index () {
+
+        return view('site.principal');
     }
 }

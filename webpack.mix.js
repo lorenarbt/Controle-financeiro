@@ -11,5 +11,12 @@ const mix = require('laravel-mix');
  |
  */
 
+//arquivo de entrada e o arquivo de saísa que irá para o diretório público
+//  mix
+//  .scripts('node_modules/jquery/dist/jquery.js', 'public/site/jquery.js')
+//  .scripts('node_modules/bootstrap/dist/js/bootstrap.bundle.js', 'public/site/bootstrap.js');
+
+ //Substituído para instalação correta do bootstrap
+
 mix.js('resources/js/app.js', 'public/js')
     .sass('resources/sass/app.scss', 'public/css');
