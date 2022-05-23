@@ -7,6 +7,6 @@ use Illuminate\Http\Request;
 class CadastroController extends Controller
 {
     public function cadastro(){
-        echo 'Cadastro';
+      return view('site.cadastro');
     }
 }
