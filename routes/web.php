@@ -23,13 +23,11 @@ Route::get('/cadastro', 'CadastroController@cadastro')->name('site.cadastro');
 
 
 Route::prefix('/user')->group(function() {
- 
+
     Route::get('/visao-geral', 'VisaoGeralController@visaoGeral')->name('user.visaogeral');
 
 
-    Route::get('/despesas', 'DespesasController@despesas')->name('user.despesas');
-    Route::get('/rendas', 'RendasController@rendas')->name('user.rendas');
-
+    Route::get('/despesas-renda', 'DespesasRendasController@despesasRendas')->name('user.despesasrendas');
 
     Route::get('/perfil', 'PerfilController@perfil')->name('user.perfil');
 
